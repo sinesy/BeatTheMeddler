@@ -242,7 +242,7 @@ Here a working PushServer server file filled with **fake** values. You have to p
 
 ###The Database
 Once you have PostresSQL Up&Running with username, password, messagesdb and accountsdb (two db can be the same one) **and** these parameters are well coded inside TSS' yml  file as seen above as jdbc string , you can now create data structures needed by the application.
-Note that you'll not fine any sql script into the projects' sources because TSS is based on Dropwizard\[[3](#three)\] and Dropwizard\[[3](#three)\] uses Liquibase\[[4](#four)\] as «*open source database-independent library for tracking, managing and applying database schema changes*» so DB infos are into xml files under "src/main/resources" folder.
+Note that you'll not fine any sql script into the projects' sources because TSS is based on Dropwizard\[[3](#three)\] and Dropwizard\[[3](#three)\] uses Liquibase\[[4](#four)\] as ��*open source database-independent library for tracking, managing and applying database schema changes*�� so DB infos are into xml files under "src/main/resources" folder.
 For executing those scripts use:
 
     java -jar TextSecureServer-<VERSION>.jar accountdb migrate config/textsecure.yml
@@ -378,7 +378,7 @@ Execute this script as explained in the first lines of it. You can find the orig
 Again, reading the comments, should be clear that:
 
 - "example.keystore" is the same you have specified  into TSS ycm file (uncomment the commented rows and chance protocol fotm http to https)
-- "whisper.store" must be installed into Signal-Android into "res/row"
+- "whisper.store" must be installed into Signal-Android into "res/raw"
 - "whisper.cer" must be installed into Signal-iOS
 
 If you change the password ("whisper") in whisper.store generation command  you have to use the same used into the org.thoughtcrime.securesms.push.TextSecurePushTrustStore.java
@@ -431,7 +431,7 @@ in this (added a PushRegistration call):
 
 If you plan to perform a pods update go into SDatabaseSecondaryIndexes.m and change:
 
-    //[AC 21/03/2016] Modificato perché le librerie sono state aggiornate e il metodo era deprecated
+    //[AC 21/03/2016] Modificato perch�� le librerie sono state aggiornate e il metodo era deprecated
     //    YapDatabaseSecondaryIndexWithObjectBlock block =
     //    ^(NSMutableDictionary *dict, NSString *collection, NSString *key, id object) {
     //        
